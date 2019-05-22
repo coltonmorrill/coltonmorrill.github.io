@@ -4,3 +4,13 @@
 3. Mobile Rules
 4. Large Screen Rules
 */
+
+
+/* 1. Imports */
+
+@import url('https://fonts.googleapis.com/css?family=Sansita&display=swap');
+
+
+.sectiontitles {
+        font-family: Sansita, sans-serif;
+}

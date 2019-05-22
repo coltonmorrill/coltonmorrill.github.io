@@ -1,0 +1,15 @@
+h2 {
+    color:blue;
+}
+
+.class {
+    color:red;
+}
+
+p.class {
+    color:green;
+}
+
+#id {
+    color:pink;
+}

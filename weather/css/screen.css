@@ -22,9 +22,92 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #header {
-        background-color:blue;
+        background-color:#4286f4;
+        height:50px; 
 }
+#title {
+        padding:8px;
+        font-size:30px;
+}
+#logo {
+        height:50px;
+        float:left;
+}
+#navbar {
+        background-color:#4286f4;
+        height:45px;
+}
+#links {
+        list-style-type:none;
+     
+}
+a.navlink {
+        color:white;
+        text-decoration:none;
+        display:block;
+        padding:15px;
+        text-align:center;
+}
+.navlink {
+        float:left;
+}
+#zipeleloc {
+        margin-left:0;
+        padding-left:0;
+}
+.coordinates {
+        display:inline;
+        padding:2px;
+        font-size:15px;
+}
+.mainsection {
+        border:black solid;
+        text-align:center;
+        border-radius:10px;
+        margin-top:5px;
+        background-image: linear-gradient(#96bbf7, #d8d4cd)
+}
+#weathercondition{
+        background-image: url("../weather-site-images/rain.jpg");
+}
+#tempnow {
+        font-size:50px;
+}
+#highlow {
+        display:inline;
+}
+#hightemp {
+        color:red;
+}
+#lowtemp {
+        color:blue;
 
-/* 3. Mobile? */
+}
+#weatherinfoimage {
+        height:50%;
+        width: 50%;
+}
+#section5 {
+        border:black solid;
+        border-radius:10px;
+        background-color: #d8d4cd;
+        height:110px;
+        margin-top:5px;
+}
+#hourlyforcast {
+    white-space:nowrap;
+    overflow: auto;
+    padding-bottom:5px;
+}
+.hours {
+      display:inline; 
+}
+.sectiontitles {
+        text-align: center;
+}
+#footer {
+        background-color:#4286f4;
+}
+/* 3. Mobile */
 
 /* 4. Large Screen Rules */

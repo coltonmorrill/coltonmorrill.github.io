@@ -110,6 +110,17 @@ a.navlink {
 #footer {
         background-color:#4286f4;
 }
+#pointercontainer {
+        position:relative;
+}
+#windspeed {
+        position: absolute;
+        left: 0;
+        top: 40%;
+        width: 100%;
+        text-align: center;
+    
+}
 /* 3. Mobile */
 
 /* 4. Large Screen Rules */

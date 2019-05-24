@@ -3,7 +3,7 @@
  <head>
   <meta charset="UTF-8">
   <title>Franklin, ID | Weather Site</title>
-  <link rel="stylesheet" type="text/css" href="css/screen.css">
+  <link rel="stylesheet" type="text/css" href="css/screen.css" media="screen">
   <meta name="description" content="Franklin Idaho Weather Information.">
   <meta name="viewport" content="width=device-width">
 
@@ -42,8 +42,10 @@
                     </section>
                     <section class="mainsection">
                         <h2 class="sectiontitles">Wind</h2>
-                            <img id="pointer" src="weather-site-images/wind-pointer.png" alt="wind pointer">
+                            <div id="pointercontainer">
+                        <img id="pointer" src="weather-site-images/wind-pointer.png" alt="wind pointer">
                                 <p id="windspeed">5 mph</p>
+                               </div>
                                 <p id="direction">Direction: SW</p>
                                     <p id="gusts">Gusts: 10-12 mph</p>
                     </section>

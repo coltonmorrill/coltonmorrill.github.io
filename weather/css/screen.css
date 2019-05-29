@@ -78,15 +78,16 @@ a.navlink {
 #tempnow {
         font-size:50px;
 }
-#highlow {
-        display:inline;
-}
+
 #hightemp {
         color:red;
+        display:inline;
+
 }
 #lowtemp {
         color:blue;
-
+        display:inline;
+       
 }
 #weatherinfoimage {
         height:50%;

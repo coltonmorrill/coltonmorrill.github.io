@@ -20,7 +20,7 @@ body {
 h1,h2,h3,h4,h5,h6 {
         font-family: 'Sansita', sans-serif;
 }
-
+/* heading css */
 #header {
         background-color:#4286f4;
         height:50px;
@@ -36,6 +36,7 @@ h1,h2,h3,h4,h5,h6 {
         height:50px;
         float:left;
 }
+/* navbar css */
 #navbar {
         background-color:#4286f4;
         height:45px;
@@ -58,6 +59,7 @@ a.navlink {
 .navlink {
         float:left;
 }
+/* section 1 css */
 #sec1title {
         text-align:left;
 }
@@ -70,6 +72,7 @@ a.navlink {
         padding:2px;
         font-size:15px;
 }
+/* container css */
 .mainsection {
         border:black solid;
         text-align:center;
@@ -77,9 +80,8 @@ a.navlink {
         margin-top:5px;
         background-image: linear-gradient(#96bbf7, #d8d4cd)
 }
-#weathercondition{
-        background-image: url("../weather-site-images/rain.jpg");
-}
+
+/* section 2 css */
 #tempnow {
         font-size:50px;
 }
@@ -94,10 +96,27 @@ a.navlink {
         display:inline;
        
 }
+/* section 3 css */
+#pointercontainer {
+        position:relative;
+}
+#windspeed {
+        position: absolute;
+        left: 0;
+        top: 40%;
+        width: 100%;
+        text-align: center;
+    
+}
+/* section 4 css */
+#weathercondition{
+        background-image: url("../weather-site-images/rain.jpg");
+}
 #weatherinfoimage {
         height:50%;
         width: 50%;
 }
+/* section 5 css */
 #section5 {
         border:black solid;
         border-radius:10px;
@@ -116,20 +135,11 @@ a.navlink {
 .sectiontitles {
         text-align: center;
 }
+/* footer css */
 #footer {
         background-color:#4286f4;
 }
-#pointercontainer {
-        position:relative;
-}
-#windspeed {
-        position: absolute;
-        left: 0;
-        top: 40%;
-        width: 100%;
-        text-align: center;
-    
-}
+
 /* 3. Mobile */
 
 /* 4. Large Screen Rules */

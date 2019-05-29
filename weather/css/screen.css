@@ -138,6 +138,7 @@ a.navlink {
         text-align:center;
         border-radius: 10px;
         margin-top:5px;
+        background-image: url("../weather-site-images/rain.jpg")
 }
 .sectiontitles {
         text-align: center;

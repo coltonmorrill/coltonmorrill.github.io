@@ -145,7 +145,7 @@ a.navlink {
 }
 /* 4. Large Screen Rules */
 /* Moves Navbar to the top of screen */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1025px) {
 #navbar {
         position:absolute;
         bottom:630px;

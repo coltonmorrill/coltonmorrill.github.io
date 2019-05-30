@@ -93,12 +93,14 @@ h1,h2,h3,h4,h5,h6 {
         margin-top:5px;
 }
 #hourlyforcast {
-    white-space:nowrap;
+    display:flex;
+    flex-flow: row nowrap;
     overflow: auto;
     padding-bottom:5px;
+    list-style-type: none;
 }
 .hours {
-      display:inline; 
+   flex-shrink: 0;
 }
 
 /* footer css */
@@ -111,27 +113,25 @@ h1,h2,h3,h4,h5,h6 {
 #navbar {
         background-color:#4286f4;
         height:45px;
-        margin-top:0;
-        padding-top:0;
-        position: fixed;
-        bottom: 0;
         width:100%
+}
+#navbar {
+        display:flex;
 }
 #links {
         list-style-type:none;
         margin-bottom:20px;
+        display: flex;
+        justify-content: center;
 }
 a.navlink {
         color:white;
         text-decoration:none;
-        display:block;
         padding:5px;
         text-align:center;
         margin-bottom:20px;
 }
-.navlink {
-        float:left;
-}
+
 /* container css */
 .mainsection {
         border:black solid;
@@ -144,3 +144,17 @@ a.navlink {
         text-align: center;
 }
 /* 4. Large Screen Rules */
+/* Moves Navbar to the top of screen */
+@media only screen and (min-width: 768px) {
+#navbar {
+        position:absolute;
+        bottom:630px;
+        background-color:#4286f4;
+        height:45px;
+        width:100%
+}
+/* shifts content down 50 pixels */
+main {
+        margin-top:50px;
+}
+}

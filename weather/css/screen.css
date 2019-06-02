@@ -163,8 +163,8 @@ main {
         justify-content:center;
 }
 .mainsection {
-        width: 431.7px;
-        margin:10px;
+        width: 100%;
+        margin:2px;
 
 }
 }

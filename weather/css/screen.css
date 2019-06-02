@@ -151,10 +151,14 @@ a.navlink {
         bottom:630px;
         background-color:#4286f4;
         height:45px;
-        width:100%
+        width:100%;
 }
 /* shifts content down 50 pixels */
 main {
         margin-top:50px;
+}
+/* lines containers in a row */
+#widescreen {
+        display:flex;
 }
 }

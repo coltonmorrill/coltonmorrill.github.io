@@ -160,5 +160,11 @@ main {
 /* lines containers in a row */
 #widescreen {
         display:flex;
+        justify-content:center;
+}
+.mainsection {
+        width: 431.7px;
+        margin:10px;
+
 }
 }

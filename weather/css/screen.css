@@ -13,6 +13,7 @@
 @import url('normalize.css');
 
 /* 2. General */
+
 body {
         font-family: Helvetica, Arial, sans-serif;
 }
@@ -20,7 +21,9 @@ body {
 h1,h2,h3,h4,h5,h6 {
         font-family: 'Sansita', sans-serif;
 }
+
 /* heading css */
+
 #header {
         background-color:#4286f4;
         height:50px;
@@ -36,7 +39,9 @@ h1,h2,h3,h4,h5,h6 {
         height:50px;
         float:left;
 }
+
 /* section 1 css */
+
 #sec1title {
         text-align:left;
 }
@@ -49,7 +54,9 @@ h1,h2,h3,h4,h5,h6 {
         padding:2px;
         font-size:15px;
 }
+
 /* section 2 css */
+
 #tempnow {
         font-size:50px;
 }
@@ -64,7 +71,9 @@ h1,h2,h3,h4,h5,h6 {
         display:inline;
        
 }
+
 /* section 3 css */
+
 #pointercontainer {
         position:relative;
 }
@@ -76,7 +85,9 @@ h1,h2,h3,h4,h5,h6 {
         text-align: center;
     
 }
+
 /* section 4 css */
+
 #weathercondition{
         background-image: url("../weather-site-images/rain.jpg");
 }
@@ -84,7 +95,9 @@ h1,h2,h3,h4,h5,h6 {
         height:50%;
         width: 50%;
 }
+
 /* section 5 css */
+
 #section5 {
         border:black solid;
         border-radius:10px;
@@ -104,11 +117,13 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 /* footer css */
+
 #footer {
         background-color:#4286f4;
 }
 
 /* 3. Mobile */
+
 /* navbar css */
 #navbar {
         background-color:#4286f4;
@@ -133,6 +148,7 @@ a.navlink {
 }
 
 /* container css */
+
 .mainsection {
         border:black solid;
         text-align:center;
@@ -140,12 +156,16 @@ a.navlink {
         margin-top:5px;
         background-image: url("../weather-site-images/rain.jpg")
 }
+
 .sectiontitles {
         text-align: center;
 }
+
 /* 4. Large Screen Rules */
+
 /* Moves Navbar to the top of screen */
 @media only screen and (min-width: 1025px) {
+
 #navbar {
         position:absolute;
         bottom:659px;
@@ -153,19 +173,23 @@ a.navlink {
         height:45px;
         width:100%;
 }
+
 /* shifts content down 50 pixels */
 main {
         margin-top:50px;
 }
+
 /* lines containers in a row */
 #widescreen {
         display:flex;
         justify-content:center;
 }
+
 /* makes containers fit the whole screen */
 .mainsection {
         width: 100%;
         margin:2px;
 
 }
+
 }

@@ -162,6 +162,7 @@ main {
         display:flex;
         justify-content:center;
 }
+/* makes containers fit the whole screen */
 .mainsection {
         width: 100%;
         margin:2px;

@@ -172,6 +172,7 @@ a.navlink {
         background-color:#4286f4;
         height:45px;
         width:100%;
+       
 }
 
 /* shifts content down 50 pixels */
@@ -183,13 +184,39 @@ main {
 #widescreen {
         display:flex;
         justify-content:center;
+        width:95%;
+        margin: 0 auto;
 }
 
 /* makes containers fit the whole screen */
 .mainsection {
-        width: 100%;
+        width: 95%;
         margin:2px;
 
 }
 
+#section5 {
+        border:black solid;
+        border-radius:10px;
+        background-color: #d8d4cd;
+        height:110px;
+        margin-top:5px; 
+        width:94.5%;
+        margin:0 auto;
+}
+
+#footer {
+        width:95%;
+        margin: 0 auto;
+}
+
+#sec1title {
+        width: 95%;
+        margin: 0 auto;
+}
+
+#zipeleloc {
+        width:95%;
+        margin: 0 auto;
+}
 }

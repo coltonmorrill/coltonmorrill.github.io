@@ -30,7 +30,7 @@ h1,h2,h3,h4,h5,h6 {
         padding:8px;
         font-size:30px;
         padding-left:65px;
-       
+        margin-top:0;
 }
 #logo {
         height:50px;
@@ -148,7 +148,7 @@ a.navlink {
 @media only screen and (min-width: 1025px) {
 #navbar {
         position:absolute;
-        bottom:630px;
+        bottom:659px;
         background-color:#4286f4;
         height:45px;
         width:100%;

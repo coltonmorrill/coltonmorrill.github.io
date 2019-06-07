@@ -52,6 +52,7 @@ h1 {
 	background-image: url("../images/nps-logo-50px.png"), url("../images/looking-down-400px.jpg");
 	background-position: right;
 	background-repeat: no-repeat, no-repeat;
+	background-size: contain ,cover;
 }
 
 
@@ -177,6 +178,7 @@ h1 {
 	background-image: url("../images/nps-logo-100px.png"), url("../images/looking-down-800px.jpg");
 	background-position: right;
 	background-repeat: no-repeat, no-repeat;
+	background-size: contain ,cover;
 	}
 	.page-nav {
 		position: relative;
@@ -226,7 +228,7 @@ h1 {
 	background-image: url("../images/nps-logo-150px.png"), url("../images/looking-down-1300px.jpg");
 	background-position: right;
 	background-repeat: no-repeat, no-repeat;
-	
+	background-size: contain ,cover;
 }
 	}
 	.page-nav li {

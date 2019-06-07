@@ -46,10 +46,13 @@ h1 {
 * Background Image
 *******************************/
 
-
 /*	Background Images - use with Small screens */
 
-.page-header {}
+.page-header {
+	background-image: url("../images/nps-logo-50px.png"), url("../images/looking-down-400px.jpg");
+	background-position: right;
+	background-repeat: no-repeat, no-repeat;
+}
 
 
 /*******************************
@@ -215,7 +218,13 @@ h1 {
 		line-height: 1.05;
 	}
 	/*	Background Images - Use with large screens */
-	.page-header {}
+	.page-header {
+	background-image: url("../images/nps-logo-150px.png"), url("../images/looking-down-1300px.jpg");
+	background-position: right;
+	background-repeat: no-repeat, no-repeat;
+	
+}
+	}
 	.page-nav li {
 		flex: 0 1 10%;
 	}

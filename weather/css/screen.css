@@ -89,7 +89,7 @@ h1,h2,h3,h4,h5,h6 {
 /* section 4 css */
 
 #weathercondition{
-        background-image: url("../weather-site-images/rain.jpg");
+        background-image: url("../weather-site-images/rain-20.jpg");
 }
 #weatherinfoimage {
         height:50%;
@@ -154,7 +154,8 @@ a.navlink {
         text-align:center;
         border-radius: 10px;
         margin-top:5px;
-        background-image: url("../weather-site-images/rain.jpg")
+        background-image: url("../weather-site-images/rain-20.jpg");
+    
 }
 
 .sectiontitles {
@@ -218,5 +219,13 @@ main {
 #zipeleloc {
         width:95%;
         margin: 0 auto;
+}
+
+/* Image Size Change */
+.mainsection {
+        background-image: url("../weather-site-images/rain.jpg");
+}
+#weathercondition{
+        background-image: url("../weather-site-images/rain-20.jpg");
 }
 }

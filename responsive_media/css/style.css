@@ -49,7 +49,7 @@ h1 {
 /*	Background Images - use with Small screens */
 
 .page-header {
-	background-image: url("../images/nps-logo-50px.png"), url("../images/looking-down-400px.jpg");
+	background-image: url("../images/ynps-logo-50px.png"), url("../images/looking-down-400px.jpg");
 	background-position: right;
 	background-repeat: no-repeat, no-repeat;
 	background-size: contain ,cover;

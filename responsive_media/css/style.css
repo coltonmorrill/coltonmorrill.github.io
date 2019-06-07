@@ -173,7 +173,11 @@ h1 {
 		line-height: 1.125;
 	}
 	/*	Background Images - Use with medium screens */
-	.page-header {}
+	.page-header {
+	background-image: url("../images/nps-logo-100px.png"), url("../images/looking-down-800px.jpg");
+	background-position: right;
+	background-repeat: no-repeat, no-repeat;
+	}
 	.page-nav {
 		position: relative;
 	}

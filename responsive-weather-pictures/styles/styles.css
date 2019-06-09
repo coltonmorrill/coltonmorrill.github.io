@@ -1,0 +1,21 @@
+/* General Rules */
+
+.big {
+    display:none;
+}
+
+
+/* large screen rules */
+
+@media only screen and (min-width: 1025px) {
+
+   
+
+    .small {
+        display: none;
+    }
+
+    .big {
+        display:block;
+    }
+}

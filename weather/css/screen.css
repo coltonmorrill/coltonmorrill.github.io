@@ -116,9 +116,7 @@ h1,h2,h3,h4,h5,h6 {
 
 /* section 4 css */
 
-#weathercondition{
-        background-image: url("../weather-site-images/rain-20.jpg");
-}
+
 #weatherinfoimage {
         height:50%;
         width: 50%;
@@ -182,7 +180,7 @@ a.navlink {
         text-align:center;
         border-radius: 10px;
         margin-top:5px;
-        background-image: url("../weather-site-images/rain-20.jpg");
+    
     
 }
 
@@ -190,6 +188,33 @@ a.navlink {
         text-align: center;
 }
 
+/* #threecontainer {
+        background-image: url("../weather-site-images/rain-352.jpg");
+        background-size: cover;
+} */
+
+/* background image change rules */
+
+.rain {
+        background-image: url("../weather-site-images/rain-352.jpg");
+        background-size: cover;
+}
+.cloud {
+        background-image: url("../weather-site-images/clouds-350.jpg");
+        background-size: cover;
+}
+.fog  {
+        background-image: url("../weather-site-images/fog-349.jpg");
+        background-size: cover;
+}
+.clear {
+        background-image: url("../weather-site-images/clear-351px.jpg");
+        background-size: cover;
+}
+.snow {
+        background-image: url("../weather-site-images/snow-390px.jpg");
+        background-size: cover;
+}
 /* 4. Large Screen Rules */
 
 /* Moves Navbar to the top of screen */
@@ -210,11 +235,12 @@ main {
 }
 
 /* lines containers in a row */
-#widescreen {
+#threecontainer {
         display:flex;
         justify-content:center;
         width:95%;
         margin: 0 auto;
+        /* background-image: url("../weather-site-images/rain-602.jpg"); */
 }
 
 /* makes containers fit the whole screen */
@@ -249,11 +275,26 @@ main {
         margin: 0 auto;
 }
 
-/* Image Size Change */
-.mainsection {
-        background-image: url("../weather-site-images/rain.jpg");
+/* Large Screen Images */
+
+.rain {
+        background-image: url("../weather-site-images/rain-602.jpg");
+        background-size: cover;
 }
-#weathercondition{
-        background-image: url("../weather-site-images/rain-20.jpg");
+.cloud {
+        background-image: url("../weather-site-images/clouds-601.jpg");
+        background-size: cover;
+}
+.fog  {
+        background-image: url("../weather-site-images/fog-602px.jpg");
+        background-size: cover;
+}
+.clear {
+        background-image: url("../weather-site-images/clear-600px.jpg");
+        background-size: cover;
+}
+.snow {
+        background-image: url("../weather-site-images/snow-601.jpg");
+        background-size: cover;
 }
 }

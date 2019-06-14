@@ -109,3 +109,70 @@ function windDial(direction){
 // Calls windDial Function
 
   windDial(direction);
+
+
+
+// Background Image Change Function
+let condition = document.getElementById("sky").innerHTML;
+let lower = condition.toLowerCase();
+let c = lower.includes("clear");
+let cloud = lower.includes("cloudy");
+let f = lower.includes("foggy");
+let r = lower.includes("rain");
+let s = lower.includes("snowing");
+
+getCondition(c, cloud, f, r, s);
+function getCondition(c, cloud, f, r , s) {
+      if (c == true){
+        return "clear";
+      }
+      if (cloud == true){
+        return "cloud";
+      }
+      if (f == true) {
+        return "fog";
+      }
+      if (r == true) {
+        return "rain";
+      }
+      if (s == true) {
+        return "snow";
+      
+}
+}
+
+ 
+
+
+let weather = getCondition(c, cloud, f , r ,s);
+
+
+changeSummaryImage(weather);
+
+function changeSummaryImage(weather) {
+         
+  const threecontainer = document.getElementById("threecontainer");
+  const weatherinfoimage = document.getElementById("weatherinfoimage");
+          if (weather == "clear") {
+              threecontainer.setAttribute("class", "clear");
+              weatherinfoimage.setAttribute("class", "clear");
+          }
+          if (weather == "cloud") {
+            threecontainer.setAttribute("class", "cloud");
+            weatherinfoimage.setAttribute("class", "cloud");
+          }
+          if (weather == "fog") {
+            threecontainer.setAttribute("class", "fog");
+            weatherinfoimage.setAttribute("class", "fog");
+          }
+          if (weather == "rain") {
+            threecontainer.setAttribute("class", "rain");
+            weatherinfoimage.setAttribute("class", "rain");
+          }
+          if (weather == "snow") {
+            threecontainer.setAttribute("class", "snow");
+            weatherinfoimage.setAttribute("class", "snow");
+          }
+
+         
+}

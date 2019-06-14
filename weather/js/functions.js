@@ -100,6 +100,12 @@ function windDial(direction){
    }
 }
 
-let direction = document.getElementById('wdirection').innerHTML;
 
-windDial(direction);
+// Gathers Information for windDial Function
+
+  let direction = document.getElementById('wdirection').innerHTML;
+
+
+// Calls windDial Function
+
+  windDial(direction);

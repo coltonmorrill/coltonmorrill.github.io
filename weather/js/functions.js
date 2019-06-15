@@ -154,6 +154,7 @@ let weather = getCondition(lower);
 // Tests Weather Variable
 console.log(weather);
 
+// Runs changeSummaryImage
 changeSummaryImage(weather);
 
 function changeSummaryImage(weather) {
@@ -183,5 +184,20 @@ function changeSummaryImage(weather) {
             conditionimage.setAttribute("class", "snow");
           }
 
-         
+
+let meters = document.getElementById('meters').innerHTML;
+
+convertMeters (meters); 
+        function convertMeters (meters) {
+          
+        
+          let feet = meters * 3.281;
+          
+          feet = Math.floor(feet); 
+
+          return feet + " ft.";
+}
+
+document.getElementById('meters').innerHTML = convertMeters(meters); 
+
 }

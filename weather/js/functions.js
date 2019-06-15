@@ -184,9 +184,10 @@ function changeSummaryImage(weather) {
             conditionimage.setAttribute("class", "snow");
           }
 
-
+// Gets Information from HTML
 let meters = document.getElementById('meters').innerHTML;
 
+// Calls convertMeters Function
 convertMeters (meters); 
         function convertMeters (meters) {
           
@@ -198,6 +199,10 @@ convertMeters (meters);
           return feet + " ft.";
 }
 
+// Tests convertMeters Function
+console.log(convertMeters(meters));
+
+// Displays Return Value into Span Element
 document.getElementById('meters').innerHTML = convertMeters(meters); 
 
 }

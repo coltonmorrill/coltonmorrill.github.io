@@ -115,63 +115,72 @@ function windDial(direction){
 // Background Image Change Function
 let condition = document.getElementById("sky").innerHTML;
 let lower = condition.toLowerCase();
-let c = lower.includes("clear");
-let cloud = lower.includes("cloudy");
-let f = lower.includes("foggy");
-let r = lower.includes("rain");
-let s = lower.includes("snowing");
 
-getCondition(c, cloud, f, r, s);
-function getCondition(c, cloud, f, r , s) {
-      if (c == true){
-        return "clear";
-      }
-      if (cloud == true){
-        return "cloud";
-      }
-      if (f == true) {
-        return "fog";
-      }
-      if (r == true) {
-        return "rain";
-      }
-      if (s == true) {
-        return "snow";
-      
+
+// Tests Variables
+console.log(condition);
+console.log(lower);
+
+// Calls Function
+getCondition(lower);
+
+// Gets Condition Name
+function getCondition(lower) {
+
+if (lower.includes('clear')|| lower.includes("sunny")) {
+           return "clear";
+}
+if (lower.includes('cloudy')|| lower.includes("overcast") || lower.includes("partlycloudy")) {
+            return "cloud";
+}
+if (lower.includes('raining')|| lower.includes("rain") || lower.includes("storming") || lower.includes("lightningstorm")) {
+            return "rain";
+}
+if (lower.includes('foggy')|| lower.includes("fog") || lower.includes('hazy')) {
+             return "fog";
+}
+if (lower.includes('snowing')|| lower.includes("snow") || lower.includes('flurries') || lower.includes('snowstorm')) {
+  return "snow";
 }
 }
 
- 
+
+// Tests Function
+console.log(getCondition(lower));
 
 
-let weather = getCondition(c, cloud, f , r ,s);
+let weather = getCondition(lower);
 
+// Tests Weather Variable
+console.log(weather);
 
 changeSummaryImage(weather);
 
 function changeSummaryImage(weather) {
          
   const threecontainer = document.getElementById("threecontainer");
-  const weatherinfoimage = document.getElementById("weatherinfoimage");
+  const conditionimage = document.getElementById("conditionimage");
+         
+  
           if (weather == "clear") {
               threecontainer.setAttribute("class", "clear");
-              weatherinfoimage.setAttribute("class", "clear");
+              conditionimage.setAttribute("class", "clear");
           }
           if (weather == "cloud") {
             threecontainer.setAttribute("class", "cloud");
-            weatherinfoimage.setAttribute("class", "cloud");
+            conditionimage.setAttribute("class", "cloud");
           }
           if (weather == "fog") {
             threecontainer.setAttribute("class", "fog");
-            weatherinfoimage.setAttribute("class", "fog");
+            conditionimage.setAttribute("class", "fog");
           }
           if (weather == "rain") {
             threecontainer.setAttribute("class", "rain");
-            weatherinfoimage.setAttribute("class", "rain");
+            conditionimage.setAttribute("class", "rain");
           }
           if (weather == "snow") {
             threecontainer.setAttribute("class", "snow");
-            weatherinfoimage.setAttribute("class", "snow");
+            conditionimage.setAttribute("class", "snow");
           }
 
          

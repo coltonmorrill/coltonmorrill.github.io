@@ -187,6 +187,9 @@ function changeSummaryImage(weather) {
 // Gets Information from HTML
 let meters = document.getElementById('meters').innerHTML;
 
+// Tests meters variable
+console.log(meters);
+
 // Calls convertMeters Function
 convertMeters (meters); 
         function convertMeters (meters) {
@@ -198,6 +201,8 @@ convertMeters (meters);
 
           return feet + " ft.";
 }
+
+
 
 // Tests convertMeters Function
 console.log(convertMeters(meters));

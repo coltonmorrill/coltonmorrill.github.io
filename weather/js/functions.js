@@ -114,6 +114,8 @@ function windDial(direction){
 
 // Background Image Change Function
 let condition = document.getElementById("sky").innerHTML;
+
+// Changes the "sky" string to lower case
 let lower = condition.toLowerCase();
 
 

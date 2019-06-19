@@ -158,7 +158,9 @@ console.log(weather);
 changeSummaryImage(weather);
 
 function changeSummaryImage(weather) {
-         
+        
+  
+  //  Inserts  data into HMTL
   const threecontainer = document.getElementById("threecontainer");
   const conditionimage = document.getElementById("conditionimage");
          

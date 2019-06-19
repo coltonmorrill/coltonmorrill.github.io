@@ -120,8 +120,9 @@ h1,h2,h3,h4,h5,h6 {
 #conditionimage {
         height:50%;
         width: 50%;
-        display: block;
+        display: inline-block;
         margin: 0 auto;
+        overflow: auto;
 }
 
 /* section 5 css */
@@ -183,17 +184,11 @@ a.navlink {
         border-radius: 10px;
         margin-top:5px;
     
-    
 }
 
 .sectiontitles {
         text-align: center;
 }
-
-/* #threecontainer {
-        background-image: url("../weather-site-images/rain-352.jpg");
-        background-size: cover;
-} */
 
 /* background image change rules */
 

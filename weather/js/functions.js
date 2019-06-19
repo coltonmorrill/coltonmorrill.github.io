@@ -15,7 +15,7 @@ function buildWC(speed, temp) {
     
     // Find Spot to put Data
     
-    const feelTemp = document.getElementById('feelTemp');
+    let feelTemp = document.getElementById('feelTemp');
   
    
     // Calulates the wind chill with the new data
@@ -56,7 +56,7 @@ function windDial(direction){
 
     // Get the wind dial container
         
-        const dial = document.getElementById("dial");
+        let dial = document.getElementById("dial");
 
     // Determine the dial class
         switch (direction){
@@ -163,8 +163,8 @@ function changeSummaryImage(weather) {
         
   
   //  Inserts  data into HMTL
-  const threecontainer = document.getElementById("threecontainer");
-  const conditionimage = document.getElementById("conditionimage");
+  let threecontainer = document.getElementById("threecontainer");
+  let conditionimage = document.getElementById("conditionimage");
          
   
           if (weather == "clear") {

@@ -2,7 +2,6 @@
 
 
 // Javescript test 
-
 console.log('My javascript is being read.');
 
 

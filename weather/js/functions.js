@@ -150,7 +150,7 @@ if (lower.includes('snowing')|| lower.includes("snow") || lower.includes('flurri
 // Tests Function
 console.log(getCondition(lower));
 
-
+// Returns keyword from getCondition into the weather variable
 let weather = getCondition(lower);
 
 // Tests Weather Variable

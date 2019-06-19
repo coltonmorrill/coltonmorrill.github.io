@@ -15,7 +15,8 @@
                </header>
           
                <main>
-            
+
+                <!-- Section One -->
                     <section>
                         <h1 id="sec1title">Franklin, ID</h1>
                             <ul id="zipeleloc">
@@ -24,35 +25,51 @@
                                 <li class="coordinates" id="location"><strong>Location:</strong> 42.07 N, 111.79 W</li>
                             </ul>
                     </section>
-                    
-                    <div id="threecontainer">
+                 
+                <!-- Section for first three containers -->
+                <div id="threecontainer">
+                  
+                    <!-- Section Two -->
                     <section class= "mainsection">
                         <h2 class="sectiontitles">Temperature</h2>
-                            
+                            <!-- Current Temp -->
                             <p id="currenttemp"><span id="tempnow">40</span> &#176;F</p>
 
-                           
+                            <!-- High and Low Temps -->
                             <p id="hightemp">64 &#176;F</p> 
                             <p id="lowtemp">41 &#176;F</p>
                                     
-                                    
+                                    <!-- Wind Chill Temp -->
                                     <p id="feels">Feels Like <span id ="feelTemp">??</span> &#176;F</p>                        
                     </section>
+                  
+                  <!-- Section Three -->
                     <section class="mainsection">
                         <h2 class="sectiontitles">Wind</h2>
+                            <!-- Container for Wind Dial Image -->
                             <div id="pointercontainer">
-                       <div id="dial" class="w"><img id="pointer" src="weather-site-images/wind-pointer.png" alt="wind pointer"></div>
+                                <!-- Weather Dial Image -->
+                                <div id="dial" class="w"><img id="pointer" src="weather-site-images/wind-pointer.png" alt="wind pointer"></div>
+                                <!-- Wind Speed -->
                                 <p id="speedofwind"><span id="windspeed">5</span> mph</p>
                                </div>
+                                <!-- Wind Direction -->
                                 <p id="direction"><strong>Direction:</strong> <span id="wdirection">NW</span></p>
                                     <p id="gusts"><strong>Gusts:</strong> 10-12 mph</p>
                     </section>
+                   
+                   
+                   <!-- Section Four -->
                     <section id="weathercondition" class="mainsection">
+                         <!-- Weather Condition Title -->
                         <h2 class="sectiontitles"><span id="sky">Raining</span></h2>
+                        <!-- Container for weather condition image -->
                         <div id="conditionimage"> </div>                
                     </section>
                     </div>
-                  <section id="section5">
+                 
+                 <!-- Section Five -->
+                    <section id="section5">
                         <h2 class="sectiontitles">Hourly Forcasts</h2>
                              <ul id="hourlyforcast">
                                  <li class="hours">12am: 41&#176;F |</li>
@@ -87,7 +104,7 @@
                     <li class="navlink"><a class="navlink" href="#" title="Go to the Greenville Weather Site Page">Greenville</a></li>
                 </ul>
                 </nav>
- 
+                <!-- Javascript Link -->
                 <script src="js/functions.js"></script>
    
         </body>

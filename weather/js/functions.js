@@ -157,6 +157,7 @@ console.log(weather);
 // Runs changeSummaryImage
 changeSummaryImage(weather);
 
+// Uses getCondition keyword to change background image
 function changeSummaryImage(weather) {
         
   

@@ -2,7 +2,7 @@
 <html lang="en-us">
  <head>
   <meta charset="UTF-8">
-  <title>Franklin, ID | Weather Site</title>
+  <title id="page-title"> | Weather Site</title>
   <link rel="stylesheet" type="text/css" href="css/screen.css" media="screen">
   <meta name="description" content="Greevnille South Coralina Weather Information.">
   <meta name="viewport" content="width=device-width">
@@ -14,7 +14,14 @@
                 <p id="title">The Weather Site</p>
                </header>
           
-               <main>
+               
+               
+               <section id="status">Please be patient while I get your weather information.</section>
+               
+               
+               
+               
+               <main id="main-content" class="hide">
 
                 <!-- Section One -->
                     <section>
@@ -95,7 +102,7 @@
                 &copy;2019, The Weather Site
                </footer>
                <!-- Navigation Bar -->
-               <nav id="navbar">
+               <nav id="page-nav">
                 <ul id="links">
                     <li class="navlink"><a class="navlink" href="https://coltonmorrill.github.io/" title="Go the the Home Page">Home</a></li>
                     <li class="navlink"><a class="navlink" href="#" title="">Current</a></li>
@@ -107,6 +114,6 @@
                 </nav>
                 <!-- Javascript Link -->
                 <script src="js/functions.js"></script>
-   
+                <script src="js/localdata.js"></script>
         </body>
 </html>

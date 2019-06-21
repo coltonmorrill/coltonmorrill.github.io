@@ -153,13 +153,13 @@ h1,h2,h3,h4,h5,h6 {
 
 /* 3. Mobile */
 
-/* navbar css */
-#navbar {
+/* page-nav css */
+#page-nav {
         background-color:#4286f4;
         height:45px;
         width:100%;
 }
-#navbar {
+#page-nav {
         display:flex;
 }
 #links {
@@ -212,12 +212,25 @@ a.navlink {
         background-image: url("../weather-site-images/snow-390px.jpg");
         background-size: cover;
 }
+
+/* Hides content until data is ready */
+.hide{
+        display: none;
+      }
+
+
+
 /* 4. Large Screen Rules */
 
-/* Moves Navbar to the top of screen */
+
+
+
+
+
+/* Moves page-nav to the top of screen */
 @media only screen and (min-width: 1025px) {
 
-#navbar {
+#page-nav {
         position:absolute;
         bottom:659px;
         background-color:#4286f4;

@@ -1,0 +1,1 @@
+let weatherURL = "js/weather.json";

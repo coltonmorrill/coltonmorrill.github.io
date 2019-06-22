@@ -48,10 +48,10 @@ function fetchData(weatherURL){
   
       // Get the current conditions
       let condition = g.Summary;
-
+      let conditionString = JSON.stringify(condition);
       // test
       console.log("Condition is: " + condition);
-  
+      console.log(conditionString);
       // Get the hourly data 
       let hourly = g.Hourly;
 

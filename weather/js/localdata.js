@@ -34,28 +34,51 @@ function fetchData(weatherURL){
       console.log('fullName is: '+fullName);
   
       // Get the temperature data
-  
+      let temp = g.Temp;
+
+      // test
+      console.log("temp is: " + temp);
   
       // Get the wind data 
-  
+      let wind = g.Wind;
+
+      // test
+      console.log("Wind speed is: " + wind);
   
       // Get the current conditions
-  
+      let condition = g.Summary;
+
+      // test
+      console.log("Condition is: " + condition);
   
       // Get the hourly data 
-  
+      let hourly = g.Hourly;
+
+      // test
+      console.log("Hourly Temps are: " + hourly);
+      
+      
+      
+      
       // ************ Display the content ******************************
+     
       // Set the title with the location name at the first
+      
       // Gets the title element so it can be worked with
       let pageTitle = document.getElementById('page-title');
+     
       // Create a text node containing the full name 
       let fullNameNode = document.createTextNode(fullName);
+     
       // inserts the fullName value before any other content that might exist
       pageTitle.insertBefore(fullNameNode, pageTitle.childNodes[0]);
+     
       // When this is done the title should look something like this:
+      
       // Greenville, SC | The Weather Site
   
       // Set the Location information
+     
       // Get the h1 to display the city location
       let contentHeading = document.getElementById('contentHeading');
       contentHeading.innerHTML = fullName;
@@ -63,13 +86,16 @@ function fetchData(weatherURL){
   
   
       // Set the temperature information
-  
-  
+      let tempnow = document.getElementById('tempnow');
+      tempnow.innerHTML = temp; 
+   
       // Set the wind information
-  
+      let windspeed = document.getElementById("windspeed");
+      windspeed.innerHTML = wind; 
   
       // Set the current conditions information
-  
+      let sky = document.getElementById('sky');
+      sky.innerHTML = condition;  
   
       // Set the hourly temperature information
   

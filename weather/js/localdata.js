@@ -38,26 +38,37 @@ function fetchData(weatherURL){
       let temp = g.Temp;
 
       // test
-      console.log("temp is: " + temp);
+      console.log(temp);
   
       // Get the wind data 
       let wind = g.Wind;
 
       // test
-      console.log("Wind speed is: " + wind);
+      console.log(wind);
   
       // Get the current conditions
       let condition = g.Summary;
-      let conditionString = JSON.stringify(condition);
+      // let conditionString = JSON.stringify(condition);
       // test
-      console.log("Condition is: " + condition);
-      console.log(conditionString);
+      console.log(condition);
+      // console.log(conditionString);
       // Get the hourly data 
       let hourly = g.Hourly;
 
       // test
-      console.log("Hourly Temps are: " + hourly);
+      console.log(hourly);
       
+      // Get Wind Direction
+      let direction = g.Direction;
+      
+      // test
+      console.log (direction); 
+
+      // Get Elevation
+      let elevation = g.Elevation;
+
+      // test
+      console.log(elevation);
       
       
       
@@ -87,26 +98,55 @@ function fetchData(weatherURL){
   
   
       // Set the temperature information
-      let tempnow = document.getElementById('tempnow');
-      tempnow.innerHTML = temp; 
+      document.getElementById("tempnow").innerHTML = temp;
    
       // Set the wind information
-      let windspeed = document.getElementById("windspeed");
-      windspeed.innerHTML = wind; 
-  
+      document.getElementById("windspeed").innerHTML = wind;
+      
+
+      // Set the Wind Chill
+      buildWC(wind,temp);
+      console.log(wind,temp);
+
       // Set the current conditions information
-      let sky = document.getElementById('sky');
-      sky.innerHTML = condition;  
+     
   
+
+      // Set the Conditions
+      getCondition(condition);
+      console.log(condition);
+      document.getElementById("sky").innerHTML = condition; 
+      let conditionset = getCondition(condition);
+      changeSummaryImage(conditionset);
+      console.log(conditionset);
+
       // Set the hourly temperature information
-  
-  
+      document.getElementById("hourlyforcast").innerHTML = hourly;
+      // Set the Wind Direction
+      document.getElementById("wdirection").innerHTML = direction;
+      
+
+      // set the wind dial
+      windDial(direction);
+      console.log(direction);
+      
+      // Set the Elevation
+      document.getElementById("meters").innerHTML = elevation;
+      
+      // Set Elevation
+      convertMeters(elevation);
+      console.log(elevation);
+     
       // Change the status of the containers
-      contentContainer.setAttribute('class', 'hide'); // removes the hide class
+      contentContainer.setAttribute('class', ''); // removes the hide class
       statusContainer.setAttribute('class', 'hide'); // hides the status container
     })
     .catch(function(error){
     console.log('There was a fetch problem: ', error.message);
     statusContainer.innerHTML = 'Sorry, the data could not be processed.';
     })
+    
+
+
+  
   }

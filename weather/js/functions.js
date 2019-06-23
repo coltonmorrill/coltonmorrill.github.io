@@ -7,8 +7,6 @@ console.log('My javascript is being read.');
 
 
 
-
-
 // Wind Chill Function
 
 function buildWC(speed, temp) {
@@ -134,7 +132,7 @@ if (lower.includes('clear')|| lower.includes("sunny")) {
 if (lower.includes('cloudy')|| lower.includes("overcast") || lower.includes("partlycloudy")) {
             return "cloud";
 }
-if (lower.includes('raining')|| lower.includes("rain") || lower.includes("storming") || lower.includes("lightningstorm")) {
+if (lower.includes('raining')|| lower.includes("rain") || lower.includes("storming") || lower.includes("lightningstorm") || lower.includes("thunderstorm") || lower.includes("thunderstorms")) {
             return "rain";
 }
 if (lower.includes('foggy')|| lower.includes("fog") || lower.includes('hazy')) {
@@ -213,5 +211,56 @@ console.log(convertMeters(meters));
 
 // Displays Return Value into Span Element
 document.getElementById('meters').innerHTML = convertMeters(meters); 
+
+
+
+// variable creation
+
+
+
+// Convert, Format time to 12 hour format
+function format_time(hour) {
+  if(hour > 23){ 
+   hour -= 24; 
+  } 
+  let amPM = (hour > 11) ? "pm" : "am"; 
+  if(hour > 12) { 
+   hour -= 12; 
+  } 
+  if(hour == 0) { 
+   hour = "12"; 
+  } 
+  return hour + amPM;
+ } 
+
+
+   // Get the next hour based on the current time
+let date = new Date(); 
+let nextHour = date.getHours() + 1;
+let hourlyTemps = 5;
+
+buildHourlyData(nextHour, hourlyTemps);
+ // Build the hourly temperature list
+function buildHourlyData(nextHour,hourlyTemps) {
+
+  
+  // Data comes from a JavaScript object of hourly temp name - value pairs
+  // Next hour should have a value between 0-23
+  // The hourlyTemps variable holds an array of temperatures
+  // Line 8 builds a list item showing the time for the next hour 
+  // and then the first element (value in index 0) from the hourly temps array
+   let hourlyListItems = '<li>' + format_time(nextHour) + ': ' + hourlyTemps[0] + '&deg;F</li>';
+   // Build the remaining list items using a for loop
+   for (let i = 1, x = hourlyTemps.length; i < x; i++) {
+    hourlyListItems += '<li>' + format_time(nextHour+i) + ': ' + hourlyTemps[i] + '&deg;F</li>';
+   }
+   console.log('HourlyList is: ' +hourlyListItems);
+   return hourlyListItems;
+  }
+
+
+  
+  document.getElementById("hourlyforcast").innerHTML = buildHourlyData(nextHour, hourlyTemps);
+  
 
 }

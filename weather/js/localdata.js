@@ -121,7 +121,7 @@ function fetchData(weatherURL){
       console.log(conditionset);
 
       // Set the hourly temperature information
-      document.getElementById("hourlyforcast").innerHTML = hourly;
+     
       // Set the Wind Direction
       document.getElementById("wdirection").innerHTML = direction;
       

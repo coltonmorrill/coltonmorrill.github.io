@@ -237,7 +237,7 @@ function format_time(hour) {
    // Get the next hour based on the current time
 let date = new Date(); 
 let nextHour = date.getHours() + 1;
-let hourlyTemps = 5;
+let hourlyTemps = [55, 55, 56, 57, 57, 57, 59, 59, 59, 60, 61, 63, 64];
 
 buildHourlyData(nextHour, hourlyTemps);
  // Build the hourly temperature list

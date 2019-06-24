@@ -154,7 +154,11 @@ function fetchData(weatherURL){
       console.log(convertNumber);
 
       // set zipcode
-      document.getElementById("zipcont").innerHTML = zip; 
+      document.getElementById('newzip').innerHTML = zip;
+
+      // set long and lat
+      document.getElementById("long").innerHTML = long;
+      document.getElementById("lat").innerHTML = lat;
      
      
      

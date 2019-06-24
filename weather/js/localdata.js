@@ -70,7 +70,23 @@ function fetchData(weatherURL){
       // test
       console.log(elevation);
       
-      
+      // Get Zipcode
+      let zip = g.Zip;
+
+      // test
+      console.log(zip);
+
+      // Get Longitude
+      let long = g.Longitude;
+
+      // test
+      console.log(long);
+
+      // Get Latitude
+      let lat = g.Latitude;
+
+      // test
+      console.log(lat);
       
       // ************ Display the content ******************************
      
@@ -113,10 +129,9 @@ function fetchData(weatherURL){
   
 
       // Set the Conditions
-      getCondition(condition);
-      console.log(condition);
+      let lower = condition.toLowerCase();
       document.getElementById("sky").innerHTML = condition; 
-      let conditionset = getCondition(condition);
+      let conditionset = getCondition(lower);
       changeSummaryImage(conditionset);
       console.log(conditionset);
 
@@ -134,12 +149,27 @@ function fetchData(weatherURL){
       document.getElementById("meters").innerHTML = elevation;
       
       // Set Elevation
-      convertMeters(elevation);
-      console.log(elevation);
+      let convertNumber = convertMeters(elevation);
+      convertMeters(convertNumber);
+      console.log(convertNumber);
+
+      // set zipcode
+      document.getElementById("zipcont").innerHTML = zip; 
+     
+     
+     
+     
      
       // Change the status of the containers
       contentContainer.setAttribute('class', ''); // removes the hide class
       statusContainer.setAttribute('class', 'hide'); // hides the status container
+   
+   
+   
+   
+   
+   
+   
     })
     .catch(function(error){
     console.log('There was a fetch problem: ', error.message);

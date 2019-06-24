@@ -283,6 +283,7 @@ main {
 #zipeleloc {
         width:95%;
         margin: 0 auto;
+        display: flex;
 }
 
 /* Large Screen Images */

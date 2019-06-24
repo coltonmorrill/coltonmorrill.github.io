@@ -120,6 +120,15 @@ function fetchData(weatherURL){
       document.getElementById("windspeed").innerHTML = wind;
       
 
+
+      // set zipcode
+      document.getElementById('newzip').innerHTML = zip;
+
+      // set long and lat
+      document.getElementById("long").innerHTML = long;
+      document.getElementById("lat").innerHTML = lat;
+
+
       // Set the Wind Chill
       buildWC(wind,temp);
       console.log(wind,temp);
@@ -145,20 +154,18 @@ function fetchData(weatherURL){
       windDial(direction);
       console.log(direction);
       
-      // Set the Elevation
-      document.getElementById("meters").innerHTML = elevation;
-      
+
+         
       // Set Elevation
       let convertNumber = convertMeters(elevation);
       convertMeters(convertNumber);
+      document.getElementById("meters").innerHTML = elevation;
       console.log(convertNumber);
+      // Set the Elevation
 
-      // set zipcode
-      document.getElementById('newzip').innerHTML = zip;
+   
 
-      // set long and lat
-      document.getElementById("long").innerHTML = long;
-      document.getElementById("lat").innerHTML = lat;
+
      
      
      

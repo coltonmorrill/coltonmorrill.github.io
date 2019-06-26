@@ -2,15 +2,47 @@
 let pageNav = document.getElementById('page-nav');
 let statusContainer = document.getElementById('status');
 let contentContainer = document.getElementById('main-content');
+let hourlyList = document.getElementById("hourlyData");
+
+pageNav.addEventListener('click', function(evt){
+
+// Get the City Name
+
+let cityName = evt.target.innerHTML;
+switch (cityName) {
+  
+  // Checks city names
+ 
+  case "Franklin":
+  case "Greenville":
+  case "Springfield":  
+ 
+  // Stops from loading new page. Gets Data from JSON
+  
+  evt.preventDefault();
+ 
+  break;
+
+}
+
+
+
 
 // Creates path to weather.json
 let weatherURL = "js/weather.json";
-fetchData(weatherURL);
+
+
+
+// fetchData(weatherURL);
+
+
 // Gets Json data
-function fetchData(weatherURL){
+
+// function fetchData(weatherURL){
     
-     let cityName = 'Greenville'; // The data we want from the weather.json file
-    fetch(weatherURL)
+//      let cityName = 'Greenville'; // The data we want from the weather.json file
+   
+fetch(weatherURL)
     .then(function(response) {
     if(response.ok){
     return response.json();
@@ -186,5 +218,5 @@ function fetchData(weatherURL){
     
 
 
-  
-  }
+  })
+  // }

@@ -140,6 +140,7 @@ h1,h2,h3,h4,h5,h6 {
     overflow: auto;
     padding-bottom:5px;
     list-style-type: none;
+    flex-shrink: 0;
 }
 .hours {
    flex-shrink: 0;
@@ -161,13 +162,14 @@ h1,h2,h3,h4,h5,h6 {
 }
 #page-nav {
         display:flex;
+        position: fixed;
 }
 #links {
         list-style-type:none;
-        margin-bottom:20px;
+        margin-bottom:0px;
         display: flex;
         justify-content: center;
-        position: fixed;
+   
 }
 a.navlink {
         color:white;

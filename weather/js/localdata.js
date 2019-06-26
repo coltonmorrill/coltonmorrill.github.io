@@ -157,11 +157,8 @@ function fetchData(weatherURL){
 
          
       // Set Elevation
-      let convertNumber = convertMeters(elevation);
-      convertMeters(convertNumber);
-      document.getElementById("meters").innerHTML = elevation;
-      console.log(convertNumber);
-      // Set the Elevation
+
+  
 
    
 

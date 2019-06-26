@@ -167,6 +167,7 @@ h1,h2,h3,h4,h5,h6 {
         margin-bottom:20px;
         display: flex;
         justify-content: center;
+        position: fixed;
 }
 a.navlink {
         color:white;
@@ -214,9 +215,9 @@ a.navlink {
 }
 
 /* Hides content until data is ready */
-/* .hide{
+.hide{
         display: none;
-      } */
+      }
 
 
 

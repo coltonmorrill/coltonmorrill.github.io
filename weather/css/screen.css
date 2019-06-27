@@ -118,7 +118,7 @@ h1,h2,h3,h4,h5,h6 {
 
 
 #conditionimage {
-        height:50%;
+        height:150px;
         width: 50%;
         display: inline-block;
         margin: 0 auto;
@@ -163,6 +163,8 @@ h1,h2,h3,h4,h5,h6 {
 #page-nav {
         display:flex;
         position: fixed;
+        bottom: 0;
+        overflow: auto;
 }
 #links {
         list-style-type:none;
@@ -199,6 +201,7 @@ a.navlink {
         background-image: url("../weather-site-images/rain-352.jpg");
         background-size: cover;
 }
+
 .cloud {
         background-image: url("../weather-site-images/clouds-350.jpg");
         background-size: cover;
@@ -234,11 +237,12 @@ a.navlink {
 @media only screen and (min-width: 1025px) {
 
 #page-nav {
-        position:absolute;
+        position: absolute;
         bottom:659px;
         background-color:#4286f4;
         height:45px;
-        width:100%;
+        width:95%;
+        margin-left:38px;
        
 }
 
@@ -272,7 +276,10 @@ main {
         width:94.5%;
         margin:0 auto;
 }
-
+#header {
+        width:95%;
+        margin: 0 auto;
+}
 #footer {
         width:95%;
         margin: 0 auto;
@@ -315,6 +322,9 @@ main {
 /* Status Statement CSS */
 
 #status {
-margin-top: 50px;
+
+width:95%;
+margin: 0 auto;
+margin-top:50px;
 }
 }

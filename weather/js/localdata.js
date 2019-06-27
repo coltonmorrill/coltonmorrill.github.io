@@ -56,6 +56,10 @@ fetch(weatherURL)
       // shorten the variable and focus only on the data we want to reduce typing
       let g = data[cityName];
   
+      
+      
+      
+      
       // ************ Get the content ******************************
   
       // Get the location data
@@ -66,66 +70,72 @@ fetch(weatherURL)
       // See if it worked
       console.log('fullName is: '+fullName);
   
-      // Get the temperature data
+      // **** Get the temperature data
       let temp = g.Temp;
 
       // test
       console.log(temp);
   
-      // Get the wind data 
+      // **** Get the wind data 
       let wind = g.Wind;
 
       // test
       console.log(wind);
   
-      // Get the current conditions
+      // **** Get the current conditions 
       let condition = g.Summary;
-      // let conditionString = JSON.stringify(condition);
+     
       // test
       console.log(condition);
-      // console.log(conditionString);
-      // Get the hourly data 
+      
+      // **** Get the hourly data 
       let hourly = g.Hourly;
 
       // test
       console.log(hourly);
       
-      // Get Wind Direction
+      // **** Get Wind Direction
       let direction = g.Direction;
       
       // test
       console.log (direction); 
 
-
-      // Get Gusts
+      // **** Get Gusts
       let gust = g.Gusts
 
       // test
       console.log(gust);
      
-      // Get Elevation
+      // **** Get Elevation
       let elevation = g.Elevation;
 
       // test
       console.log(elevation);
       
-      // Get Zipcode
+      // **** Get Zipcode
       let zip = g.Zip;
 
       // test
       console.log(zip);
 
-      // Get Longitude
+      // **** Get Longitude
       let long = g.Longitude;
       long = Math.floor(long *100)/100;
+      
       // test
       console.log(long);
 
-      // Get Latitude
+      // **** Get Latitude
       let lat = g.Latitude;
       lat = Math.floor(lat*100)/100;
+      
       // test
       console.log(lat);
+      
+      
+      
+      
+      
       
       // ************ Display the content ******************************
      
@@ -184,7 +194,6 @@ fetch(weatherURL)
       changeSummaryImage(conditionset);
       console.log(conditionset);
 
-      // Set the hourly temperature information
      
       // Set the Wind Direction
       document.getElementById("wdirection").innerHTML = direction;
@@ -195,17 +204,15 @@ fetch(weatherURL)
       console.log(direction);
       
 
-         
       // Set Elevation
       
-  
       convertMeters(elevation);
       console.log(convertMeters(elevation));
       document.getElementById('meters').innerHTML = convertMeters(elevation);
 
 
      
-      // set Hourly
+      // ******************  set Hourly  ************************************
 
         // Convert, Format time to 12 hour format
           function format_time(hour) {
@@ -259,7 +266,8 @@ fetch(weatherURL)
      
      
      
-      // Change the status of the containers
+      // ************** Change the status of the containers **********************
+      
       contentContainer.setAttribute('class', ''); // removes the hide class
       statusContainer.setAttribute('class', 'hide'); // hides the status container
    

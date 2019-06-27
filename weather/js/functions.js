@@ -7,6 +7,7 @@ console.log('My javascript is being read.');
 
 
 
+
 // Wind Chill Function
 
 function buildWC(speed, temp) {

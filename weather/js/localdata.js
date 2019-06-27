@@ -96,6 +96,13 @@ fetch(weatherURL)
       // test
       console.log (direction); 
 
+
+      // Get Gusts
+      let gust = g.Gusts
+
+      // test
+      console.log(gust);
+     
       // Get Elevation
       let elevation = g.Elevation;
 
@@ -110,13 +117,13 @@ fetch(weatherURL)
 
       // Get Longitude
       let long = g.Longitude;
-
+      long = Math.floor(long *100)/100;
       // test
       console.log(long);
 
       // Get Latitude
       let lat = g.Latitude;
-
+      lat = Math.floor(lat*100)/100;
       // test
       console.log(lat);
       
@@ -165,7 +172,8 @@ fetch(weatherURL)
       buildWC(wind,temp);
       console.log(wind,temp);
 
-      // Set the current conditions information
+      // Set the current wind gusts
+      document.getElementById("gust").innerHTML = gust;
      
   
 

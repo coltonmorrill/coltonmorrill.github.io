@@ -311,4 +311,10 @@ main {
         background-image: url("../weather-site-images/snow-601.jpg");
         background-size: cover;
 }
+
+/* Status Statement CSS */
+
+#status {
+margin-top: 50px;
+}
 }

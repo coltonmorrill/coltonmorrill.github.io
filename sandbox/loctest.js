@@ -146,7 +146,7 @@ function getWeather(stationId) {
     
       // Store weather information to localStorage 
    
-        storage.setItem('weatherInfo', data);
+        
    
       // Build the page for viewing 
       

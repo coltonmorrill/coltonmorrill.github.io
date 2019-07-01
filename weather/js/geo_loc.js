@@ -28,7 +28,7 @@ getGeoLocation();
 function getGeoLocation() {
 
 
-    const status = document.getElementById('status');
+    const status = document.getElementById('status2');
     status.innerHTML = 'Getting Location...';
 
 

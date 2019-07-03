@@ -1,3 +1,7 @@
+
+let statusContainer = document.getElementById('status');
+let contentContainer = document.getElementById('main-content');
+
 // These will work together to get weather information and to create the page
 'use strict';
 
@@ -275,7 +279,7 @@ function getWeather(stationId) {
       storage.setItem("Condition", data.properties.textDescription); 
       storage.setItem('Wind Gust', data.properties.windGust.value);
       storage.setItem('highTemp', data.properties.maxTemperatureLast24Hours.value);
-      storage.setItem('lowTemp', data,properties.minTemperatureLast24Hours.value);
+      storage.setItem('lowTemp', data.properties.minTemperatureLast24Hours.value);
       // Build the page for viewing 
       
      }) 
@@ -340,7 +344,7 @@ function getWeather(stationId) {
       let hTemp = 'No Data';
       document.getElementById('htemp').innerHTML = hTemp;
     }
-    if (lTemp == null) {
+    if (lTemp == "null") {
       let lTemp = 'No Data';
       document.getElementById('ltemp').innerHTML = lTemp;
     }
@@ -349,6 +353,13 @@ function getWeather(stationId) {
       document.getElementById('ltemp').innerHTML = lTemp;
     }
     
+
+
+
+     
+    contentContainer.setAttribute('class', ''); // removes the hide class
+    statusContainer.setAttribute('class', 'hide'); // hides the status container
+
   }
 
  

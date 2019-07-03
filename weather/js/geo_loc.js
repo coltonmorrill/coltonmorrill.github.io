@@ -58,7 +58,9 @@ function getGeoLocation() {
 
         // Call getLocation function, send locale
                 getLocation(locale);
-      
+                
+        // Hide Status
+        status.setAttribute("class", "hide");
         })
        } else {
         status.innerHTML = "Your browser doesn't support Geolocation or it is not enabled!";

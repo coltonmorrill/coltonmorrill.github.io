@@ -248,6 +248,11 @@ function getWeather(stationId) {
    } // end getWeather function
 
 
+
+
+
+
+   // Sets the Data into the HTML for function.js to use **********************************
     buildPage();
    function buildPage(){
 
@@ -331,12 +336,12 @@ function getWeather(stationId) {
   // Line 8 builds a list item showing the time for the next hour 
   // and then the first element (value in index 0) from the hourly temps array
       
-      let hourlyListItems = '<li>' + format_time(nextHour) + ': ' + hourlyTemps[0] + '&deg;F</li>';
+      let hourlyListItems = '<li>' + format_time(nextHour) + ': ' + hourlyTemps[0] + ' &deg;F</li>';
       
       // Build the remaining list items using a for loop
       
         for (let i = 1, x = hourlyTemps.length; i < x; i++) {
-          hourlyListItems += '<li>' + format_time(nextHour+i) + ': ' + hourlyTemps[i] + '&deg;F |</li>';
+          hourlyListItems += '<li>' + format_time(nextHour+i) + ': ' + hourlyTemps[i] + ' &deg;F |</li>';
         }
         console.log('HourlyList is: ' +hourlyListItems);
         return hourlyListItems;

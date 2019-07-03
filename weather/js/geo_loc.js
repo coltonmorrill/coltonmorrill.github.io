@@ -116,16 +116,17 @@ function getLocation(locale) {
       // Let's see what we got back
       console.log('From getHourly function:'); 
       console.log(data);
-    
-      // Store Hourly Forcast Data 
-      let hourlyForcast = [data.properties.periods[1].temperature, data.properties.periods[2].temperature, 
-                           data.properties.periods[3].temperature, data.properties.periods[4].temperature,
-                           data.properties.periods[5].temperature, data.properties.periods[6].temperature,
-                           data.properties.periods[7].temperature, data.properties.periods[8].temperature,
-                           data.properties.periods[9].temperature, data.properties.periods[10].temperature,
-                           data.properties.periods[11].temperature, data.properties.periods[12].temperature,
-                           data.properties.periods[13].temperature]; 
+   
+      let hourlyForcast = new Array(0);
+      for (let i = 1, x = 13; i < x; i++) {
+       
+        hourlyForcast.push(data.properties.periods[i].temperature); 
+      }
       
+      console.log('Hourly Forcast is ' + hourlyForcast);
+      console.log('Hourly list is ' + hourlyForcast);
+     
+     
       // Create Variables from Object
       let windDirection = data.properties.periods[0].windDirection;
       let windSpeed = data.properties.periods[0].windSpeed;
@@ -139,7 +140,7 @@ function getLocation(locale) {
      
      
       // Store data to localstorage 
-      storage.setItem("Hourly Forcast", hourlyForcast); 
+      storage.setItem("Hourly Forcast", JSON.stringify(hourlyForcast)); 
       storage.setItem('windDirection', windDirection);
       storage.setItem('windSpeed', windSpeed);
       storage.setItem('tempNow', tempNow);
@@ -375,9 +376,8 @@ function getWeather(stationId) {
      
       let date = new Date(); 
       let nextHour = date.getHours() + 1;
-      let hourlyTemps = storage.getItem('Hourly Forcast');
-      console.log(hourlyTemps);
-      buildHourlyData(nextHour, hourlyTemps);
+      let hourlyTemps = JSON.parse(storage.getItem('Hourly Forcast'));
+      buildHourlyData(nextHour, hourlyTemps); 
   
   // Build the hourly temperature list
 
@@ -390,12 +390,13 @@ function getWeather(stationId) {
   // Line 8 builds a list item showing the time for the next hour 
   // and then the first element (value in index 0) from the hourly temps array
       
-      let hourlyListItems = '<li>' + format_time(nextHour) + ': ' + hourlyTemps[0] + ' &deg;F</li>';
+      let hourlyListItems = ' <li>' + format_time(nextHour) + ': ' + hourlyTemps[0] + ' &deg;F | </li>';
       
       // Build the remaining list items using a for loop
       
-        for (let i = 1, x = hourlyTemps.length; i < x; i++) {
-          hourlyListItems += '<li>' + format_time(nextHour+i) + ': ' + hourlyTemps[i] + ' &deg;F |</li>';
+        for (let i = 1, x = 12; i < x; i++) {
+          
+          hourlyListItems += ' <li> ' + format_time(nextHour+i) + ': ' + hourlyTemps[i] + ' &deg;F | </li>';
         }
         console.log('HourlyList is: ' +hourlyListItems);
         return hourlyListItems;

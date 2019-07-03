@@ -5,6 +5,20 @@
 console.log('My javascript is being read.');
 
 
+// Set global variable for custom header required by NWS API
+var idHeader = {
+  headers: {
+    "User-Agent": "Student Learning Project - mor18023@byui.edu"
+  }
+};
+
+
+
+
+
+
+// Setup localStorage
+var storage = window.localStorage;
 
 
 
@@ -220,13 +234,5 @@ function changeSummaryImage(weather) {
           }
 
 
-
-
-// variable creation
-
-
-
-
-  
 
 }

@@ -20,6 +20,14 @@ var idHeader = {
 // Setup localStorage
 var storage = window.localStorage;
 
+ 
+let temp = parseFloat(document.getElementById('tempnow').innerHTML);
+let speed = parseFloat(document.getElementById('windspeed').innerHTML);
+
+
+// Calls the function
+
+buildWC(speed, temp);
 
 
 // Wind Chill Function
@@ -52,13 +60,9 @@ function buildWC(speed, temp) {
 }
 
 // Gathers Data to calculate wind chill
-  
-  let temp = parseFloat(document.getElementById('tempnow').innerHTML);
-  let speed = parseFloat(document.getElementById('windspeed').innerHTML);
+ 
 
-// Calls the function
 
-  buildWC(speed, temp);
 
 
 

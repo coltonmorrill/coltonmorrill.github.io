@@ -89,11 +89,13 @@ function getLocation(locale) {
       // URL for station list is in the data object 
       let stationsURL = data.properties.observationStations; 
       let hourlyForcast = data.properties.forecastHourly;
+      let dailyForcastURL = data.properties.forecast;
       // Call the function to get the list of weather stations
       console.log(hourlyForcast);
     
         getStationId(stationsURL); 
         getHourly(hourlyForcast);
+        getDaily(dailyForcastURL);
     
     }) 
     .catch(error => console.log('There was a getLocation error: ', error)) 
@@ -150,6 +152,37 @@ function getLocation(locale) {
     .catch(error => console.log('There was a getStationId error: ', error)) 
    } // end getStationId function
 
+   function getDaily(dailyForcastURL) { 
+    // NWS User-Agent header (built above) will be the second parameter 
+    fetch(dailyForcastURL, idHeader) 
+    .then(function(response){
+      if(response.ok){ 
+       return response.json(); 
+      } 
+      throw new ERROR('Response not OK.');
+    })
+    .then(function (data) { 
+      // Let's see what we got back
+      console.log('From getDaily function:'); 
+      console.log(data);
+
+      
+      // Create Variables from Object
+      let gusts = data.properties.periods[0].windSpeed;
+     
+      // Test variables
+      console.log(gusts);     
+     
+      // Store data to localstorage 
+      storage.setItem('windGusts', gusts); 
+   
+   
+   
+
+    
+    }) 
+    .catch(error => console.log('There was a getStationId error: ', error)) 
+   } // end getDaily function
 
 function getStationId(stationsURL) { 
     // NWS User-Agent header (built above) will be the second parameter 
@@ -240,7 +273,8 @@ function getWeather(stationId) {
       // Store weather information to localStorage 
       storage.setItem("Condition", data.properties.textDescription); 
       storage.setItem('Wind Gust', data.properties.windGust.value);
-   
+      storage.setItem('highTemp', data.properties.maxTemperatureLast24Hours.value);
+      storage.setItem('lowTemp', data,properties.minTemperatureLast24Hours.value);
       // Build the page for viewing 
       
      }) 
@@ -291,9 +325,29 @@ function getWeather(stationId) {
     document.getElementById('meters').innerHTML = elevation;
 
     // Set the Wind Gusts
-    let windGusts = storage.getItem('Wind Gust');
+    let windGusts = storage.getItem('windGusts');
     document.getElementById('gust').innerHTML = windGusts;
 
+
+    // Sets the High and Low Temperatures
+    let hTemp = storage.getItem('highTemp');
+    let lTemp = storage.getItem('lowTemp');
+
+    console.log(hTemp);
+    console.log(lTemp);
+    if (hTemp == "null") {
+      let hTemp = 'No Data';
+      document.getElementById('htemp').innerHTML = hTemp;
+    }
+    if (lTemp == null) {
+      let lTemp = 'No Data';
+      document.getElementById('ltemp').innerHTML = lTemp;
+    }
+    else {
+      document.getElementById('htemp').innerHTML = hTemp;
+      document.getElementById('ltemp').innerHTML = lTemp;
+    }
+    
   }
 
  
@@ -322,7 +376,7 @@ function getWeather(stationId) {
       let date = new Date(); 
       let nextHour = date.getHours() + 1;
       let hourlyTemps = storage.getItem('Hourly Forcast');
-
+      console.log(hourlyTemps);
       buildHourlyData(nextHour, hourlyTemps);
   
   // Build the hourly temperature list

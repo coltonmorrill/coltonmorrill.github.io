@@ -339,7 +339,7 @@ function getWeather(stationId) {
     let title1 = storage.getItem('locName');
     let title2 = storage.getItem('locState');
 
-    document.getElementById('page-title').innerHTML = title1 + ', ' + title2;
+    document.getElementById('page-title').innerHTML = title1 + ', ' + title2 + " | The Weather Site";
     // Sets the High and Low Temperatures
     let hTemp = storage.getItem('highTemp');
     let lTemp = storage.getItem('lowTemp');

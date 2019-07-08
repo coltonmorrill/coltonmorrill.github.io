@@ -427,6 +427,7 @@ function getWeather(stationId) {
 
      document.getElementById("hourlyforcast").innerHTML = buildHourlyData(nextHour, hourlyTemps);
 
+    
 
    
     

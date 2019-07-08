@@ -393,6 +393,10 @@ function getWeather(stationId) {
      
       let date = new Date(); 
       let nextHour = date.getHours() + 1;
+      
+      
+      // Create hourlyTemps Variable from Local Storage
+      
       let hourlyTemps = JSON.parse(storage.getItem('Hourly Forcast'));
       buildHourlyData(nextHour, hourlyTemps); 
   

@@ -130,7 +130,7 @@ function getLocation(locale) {
       }
       
       console.log('Hourly Forcast is ' + hourlyForcast);
-      console.log('Hourly list is ' + hourlyForcast);
+ 
      
      
       // Create Variables from Object

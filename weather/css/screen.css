@@ -135,12 +135,17 @@ h1,h2,h3,h4,h5,h6 {
         margin-top:5px;
 }
 #hourlyforcast {
-    display:flex;
-    flex-flow: row nowrap;
+    
+        display:flex;
     overflow: auto;
     padding-bottom:5px;
     list-style-type: none;
-    flex-shrink: 0;
+  
+}
+li.hourlyforcast {
+        
+
+        flex-shrink: 0;
 }
 .hours {
    flex-shrink: 0;

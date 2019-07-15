@@ -146,7 +146,9 @@
 .recipeText {
  display:block;
  text-align:center;
- position:absolute; 
+background-color:white; 
+ text-decoration: underline;
+ color: blue;
 }
 
 
@@ -163,6 +165,7 @@
 #price {
     color:#de2226;
     font-size:40px;
+    font-weight:bold;
   }
 
 /* Footer Styles */
@@ -229,6 +232,8 @@
     max-width:100%;
     font-size: 25px;
     display:block;
+    margin-left:30px;
+    margin-right: auto;
 }
 #acmeRocket {
     position:relative;
@@ -237,6 +242,8 @@
     margin-bottom:0px;
     margin-right:0px;
     font-size:35px;
+    display:block;
+    margin-left: 30px;
 }
 #right {
     background-color: transparent;
@@ -276,5 +283,6 @@
 #price {
   color:#de2226;
   font-size:40px;
+  font-weight:bold;
 }
 }

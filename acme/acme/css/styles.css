@@ -19,6 +19,8 @@
 #backgroundImage {
     background-image: url('../images/site/background.jpg');
     margin:0px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #whiteBackground {
@@ -164,7 +166,6 @@
 }
 #price {
     color:#de2226;
-    font-style: bold;
     font-size:40px;
   }
 
@@ -190,6 +191,12 @@
 @media only screen and (min-width: 1025px) {
 #backgroundImage {
  max-width:100%;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+#whiteBackground {
+    width:65%;
 }
 
 #coyote {
@@ -272,7 +279,6 @@
 
 #price {
   color:#de2226;
-  font-style: bold;
   font-size:40px;
 }
 }

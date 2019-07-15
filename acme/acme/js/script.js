@@ -109,12 +109,9 @@ fetch(acmeURL)
          // shorten the variable and focus only on the data we want to reduce typing
          let d = data;
          console.log(d);
-   
-         let productData = new Array(0);
-         JSON.stringify(productData.push(d.Anvils.navName));
-         JSON.stringify(productData.push(d.Explosives.navName));
-         JSON.stringify(productData.push(d.Decoys.navName));
-         JSON.stringify(productData.push(d.Traps.navName));
+        
+         let productData = Object.keys(data);
+        console.log(productData);
    
          storage.setItem("JSON Data", JSON.stringify(productData));
    
@@ -136,9 +133,9 @@ function buildNavData(productNav) {
   
   // Build the remaining list items using a for loop
   
-  for (let i = 0, x = 3; i <= x; i++) {
+  for (let i = 0, x = productNav.length; i < x; i++) {
           
-    navListItems += ' <li>' + productNav[i] + '</li>';
+    navListItems += '<li>' + '<a>' + productNav[i] + '</a>' + '</li>';
   }
 
     return navListItems;
@@ -146,7 +143,7 @@ function buildNavData(productNav) {
     
     // Displays the list elements in the HTML
     document.getElementById("navList").innerHTML = buildNavData(productNav);
-   
+   console.log(buildNavData(productNav));
     // Adds padding to the list elements
     var c = document.getElementById('navList').children;
         var i;

@@ -2,6 +2,9 @@
 
 
 /* Small Screen Rules*/
+.hide{
+    display: none;
+  }
 
 /* Background Image */
 
@@ -17,7 +20,7 @@
     display:block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom:5px;
+  
 }
 /* Navigation Bar Styling */
 
@@ -139,6 +142,24 @@
  text-align:center;
  position:absolute; 
 }
+
+
+/* Product Styles */
+
+#productTitle {
+    margin-top:0px;
+    font-size:50px;
+
+}
+#pImage {
+    max-width:100%
+}
+#price {
+    color:#de2226;
+    font-style: bold;
+    font-size:40px;
+  }
+
 /* Footer Styles */
 
 #divider {
@@ -160,15 +181,12 @@
 /* Large Screen Rules */
 @media only screen and (min-width: 1025px) {
 #backgroundImage {
- 
+ max-width:100%;
 }
-#whiteBackground{
-margin-bottom:50px;
-position:relative;
 
-}
 #coyote {
     width:100%;
+    height:80%;
 }
 #largeFlex{
     display:flex;
@@ -223,5 +241,30 @@ position:relative;
     display:block;
     margin-left: auto; 
     margin-right: auto;
+}
+#navList {
+
+    font-size:20px;
+ 
+}
+#hometitle {
+    font-size:45px;
+}
+#content {
+    display:flex;
+}
+
+#writtenContent {
+    width: 50%;
+}
+
+#productImage {
+    width:50%;
+}
+
+#price {
+  color:#de2226;
+  font-style: bold;
+  font-size:40px;
 }
 }

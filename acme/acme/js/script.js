@@ -2,8 +2,9 @@
 
 // variable creation
 
-let statusContainer = document.getElementById('status');
 
+let contentContainer = document.getElementById('firstSection');
+let secondContainer = document.getElementById('secondSection');
 // local storage
 var storage = window.localStorage;
 
@@ -17,6 +18,7 @@ var storage = window.localStorage;
 pageNav = document.getElementById('navBar');
 
 pageNav.addEventListener('click', function(evt){
+contentContainer.setAttribute('class', 'hide'); // hides the status container
 
   // Get the City Name
   
@@ -26,10 +28,21 @@ pageNav.addEventListener('click', function(evt){
     // Checks Product names
    
     case "Home":
+    contentContainer.setAttribute('class', '');
+    secondContainer.setAttribute('class', 'hide');
+    break;
     case "Anvil":
+    secondContainer.setAttribute('class', '');
+    break;
     case "Explosives":
+    secondContainer.setAttribute('class', '');
+    break;
     case "Decoys":  
+    secondContainer.setAttribute('class', '');
+    break;
     case "Traps":
+    secondContainer.setAttribute('class', '');
+   
    
     // Stops from loading new page. Gets Data from JSON
     
@@ -59,8 +72,23 @@ fetch(acmeURL)
       console.log(d);
 
       let product = d.name;
+      document.getElementById('pTitle').innerHTML = product;
       console.log(product);
 
+      let image = d.path;
+      document.getElementById('pImage').src = image;
+
+      let description = d.description;
+      document.getElementById("pDescription").innerHTML = description;
+
+      let manufacturer = d.manufacturer;
+      document.getElementById("creator").innerHTML = " " + manufacturer; 
+
+      let reviews = d.reviews;
+      document.getElementById('stars').innerHTML = " " + reviews;
+
+      let price = d.price;
+      document.getElementById('cost').innerHTML = " " + price;
     })
     
         })
@@ -126,5 +154,4 @@ function buildNavData(productNav) {
         c[i].setAttribute("class", "padding");
         }
 
-
-
+ 

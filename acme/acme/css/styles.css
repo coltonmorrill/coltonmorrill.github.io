@@ -1,0 +1,227 @@
+
+
+
+/* Small Screen Rules*/
+
+/* Background Image */
+
+#backgroundImage {
+    background-image: url('../images/site/background.jpg');
+    margin:0px;
+}
+
+#whiteBackground {
+    background-color:white;
+    width: 95%;
+    height:95%;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:5px;
+}
+/* Navigation Bar Styling */
+
+#navList {
+    display:flex;
+    background-color:red;
+    list-style-type:none;
+    color: white;
+    padding:10px;
+    font-size:15px;
+    overflow:auto;
+    margin-bottom:0px;
+}
+
+.padding {
+    padding:10px;
+}
+
+
+
+  /* mouse over link */
+  a:hover {
+    color: #990033;
+  }
+  
+  /* selected link */
+  a:active {
+    color: #000000;
+  }
+
+
+/* Title Styling */
+
+#hometitle {
+    margin-top:0px;
+    margin-bottom:0px;
+}
+/* Image Styling */
+
+#coyote {
+    max-width:100%;
+    height: auto;
+}
+
+
+#left {
+    position:relative;
+}
+#rocket {
+    position:relative;
+
+}
+#right {
+    background-color:white;
+    opacity:0.7;
+    position:absolute;
+    z-index:2;
+    top:0px;
+    right:0px;
+    height:100%;
+    width:50%;
+}
+#acmeRocket {
+    position:relative;
+    color:#990033;
+    margin-top:0px;
+    margin-bottom:0px;
+    margin-right:0px;
+}
+#rocketDeats {
+    position:relative;
+    list-style-type:none;
+    color:#990033;
+    padding-left:0px; 
+    margin-top:0px;
+    margin-right:0px;
+    max-width:100%;
+    font-size: 13px;
+}
+
+#iWant {
+    display:block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    margin-bottom:20px;
+}
+
+/* Reviews Section */
+
+#reviewHeader {
+    margin-top:0px;
+}
+
+
+/* Recipe Styling */
+#recipeHeader {
+    margin-bottom:0px;
+}
+
+#containers {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    margin-right:20px;
+}
+.imgBack {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.recipeContainer {
+    background-color: #808080;
+    width:48%;
+    margin-bottom:25px;
+}
+.recipeText {
+ display:block;
+ text-align:center;
+ position:absolute; 
+}
+/* Footer Styles */
+
+#divider {
+    background-color: black;
+    height:5px;
+}
+
+#copyright {
+    text-align:center;
+    margin-bottom:0px;
+}
+#disclaimer {
+    text-align:center;
+    margin-top:0px;
+}
+
+
+
+/* Large Screen Rules */
+@media only screen and (min-width: 1025px) {
+#backgroundImage {
+ 
+}
+#whiteBackground{
+margin-bottom:50px;
+position:relative;
+
+}
+#coyote {
+    width:100%;
+}
+#largeFlex{
+    display:flex;
+    order:-1;
+}
+#recipes {
+    order:0;
+    width:40%;
+}
+#reviews {
+    order:1;
+}
+#recipeHeader {
+    margin-top:0px;
+}
+
+.recipeContainer {
+    background-color: #808080;
+    width:48%;
+    margin-bottom:25px;
+}
+
+#rocketDeats {
+    position:relative;
+    list-style-type:none;
+    color:#990033;
+    margin-top:0px;
+    margin-right:auto;
+    max-width:100%;
+    font-size: 25px;
+    display:block;
+}
+#acmeRocket {
+    position:relative;
+    color:#990033;
+    margin-top:15px;
+    margin-bottom:0px;
+    margin-right:0px;
+    font-size:35px;
+}
+#right {
+    background-color: transparent;
+    position:absolute;
+    z-index:2;
+    top:0px;
+    right:0px;
+    height:100%;
+    width:40%;
+    opacity:1;
+}
+#deats {
+    display:block;
+    margin-left: auto; 
+    margin-right: auto;
+}
+}

@@ -146,9 +146,11 @@
 .recipeText {
  display:block;
  text-align:center;
-background-color:white; 
+ background-color:white; 
  text-decoration: underline;
  color: blue;
+ margin-bottom:0;
+ position: relative;
 }
 
 

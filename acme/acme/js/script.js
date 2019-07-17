@@ -18,7 +18,7 @@ var storage = window.localStorage;
 pageNav = document.getElementById('navBar');
 
 pageNav.addEventListener('click', function(evt){
-contentContainer.setAttribute('class', 'hide'); // hides the status container
+contentContainer.setAttribute('class', 'hide'); // hides the home page container
 
   // Get the City Name
   

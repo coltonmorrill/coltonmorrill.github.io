@@ -30,6 +30,7 @@ contentContainer.setAttribute('class', 'hide'); // hides the home page container
     case "Home":
     contentContainer.setAttribute('class', '');
     secondContainer.setAttribute('class', 'hide');
+    document.getElementById('title').innerHTML = "ACME | Home";
     break;
     case "Anvil":
     secondContainer.setAttribute('class', '');
@@ -73,6 +74,7 @@ fetch(acmeURL)
 
       let product = d.name;
       document.getElementById('pTitle').innerHTML = product;
+      document.getElementById("title").innerHTML = "ACME | " + product;
       console.log(product);
 
       let image = d.path;
